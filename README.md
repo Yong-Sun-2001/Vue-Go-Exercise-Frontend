@@ -1,4 +1,6 @@
 # Vue-Go-Exercise中的前端项目
+## 后端地址
+https://github.com/Yong-Sun-2001/Vue-Go-Exercise-Backend/tree/44773206fcae0cdbfe518b7dae1b0db3ef9503bb
 ## 实现内容
 - 嵌套路由、动态路由
 - session验证登录，自动登录
