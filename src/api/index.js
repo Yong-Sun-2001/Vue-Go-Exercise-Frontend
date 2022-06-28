@@ -26,31 +26,6 @@ export const get_logout = () => {
     url: `/logout`,
   });
 }
-//查询本学期所有开设课程
-export const reqCourseInfo = (params) => {
-  return requests({
-    method: 'get',
-    url: `/course/info`,
-    params:params,
-  });
-}
-//删除选课
-export const delCourse = (params) => {
-  return requests({
-    method: 'delete',
-    url: `/student/course`,
-    data: params,
-  });
-}
-
-//新增选课
-export const putCourse = (params) => {
-  return requests({
-    method: 'put',
-    url: `/student/course`,
-    data: params,
-  });
-}
 
 
 

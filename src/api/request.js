@@ -12,7 +12,7 @@ requests.defaults.withCredentials = true    //全局设置axios允许携带cooki
 requests.interceptors.request.use((config)=>{
 //需要携带token带给服务器
   if(store.state.user.token){
-    config.headers.Authorization =  "bear "+store.state.user.token;
+    config.headers.Authorization =  "Bearer "+store.state.user.token;
   }
     return config;
 });

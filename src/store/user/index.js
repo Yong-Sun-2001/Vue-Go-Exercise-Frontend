@@ -12,14 +12,11 @@ const state = {
 
 //mutations:修改state的唯一手段
 const mutations = {
-    USERLOGIN(state, result) {
+    TOKEN(state, result) {
         setToken(result);
         state.token = result;
     },
-    LOGINTYPE(state, result) {
-        sessionStorage.setItem(`loginType`, JSON.stringify(result))
-        state.loginType = result;
-    },
+
     //清除本地数据
     CLEAR(state) {
         //帮仓库中用户信息清空
@@ -40,7 +37,7 @@ const actions = {
         let result = await post_login(data);
         if (result.code == 1) {  //登录成功
             //用户已经登录成功且获取到token
-            //save token
+            commit("TOKEN", result.token);
         }
         //不管是否登录成功返回结果
         return result;
